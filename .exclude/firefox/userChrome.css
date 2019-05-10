@@ -1,0 +1,4 @@
+/* ~/.mozilla/firefox/<profile>/chrome/userChrome.css */
+
+/* Allows us to use Firefox tabs like i3 tabs */
+Toolbar { visibility: collapse !important; }
