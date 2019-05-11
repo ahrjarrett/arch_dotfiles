@@ -72,10 +72,8 @@ bindsym $modL+v split v
 bindsym $modL+f fullscreen
 
 # brightness
-bindsym Ctrl+F1 exec light -U 10
-bindsym Ctrl+F2 exec light -A 10
-# bindsym XF86MonBrightnessUp exec light -A 10
-# bindsym XF86MonBrightnessDown exec light -U 10
+bindsym XF86MonBrightnessUp exec light -A 10
+bindsym XF86MonBrightnessDown exec light -U 10
 
 bindsym $modL+s layout stacking
 bindsym $modL+w layout tabbed
