@@ -1,16 +1,14 @@
 # i3 config file (v4)
 
+# Super_L
 set $modL Mod4
+# Super_R
+set $modR Mod3
 set $alt Mod1
 
 
-exec setxkbmap -option ctrl:nocaps
 
 font pango:Source Sans Pro-10
-
-
-
-#set $modR Mod3 # Super_R
 
 # shift       Shift_L (0x32),  Shift_R (0x3e)
 # lock        Caps_Lock (0x42)
@@ -164,5 +162,13 @@ bindsym $modL+Shift+d exec --no-startup-id i3-dmenu-desktop
 exec nm-applet
 
 bindsym $modL+Tab workspace next
+bindsym $modL+Shift+Tab workspace prev
+
+
+### SUPER_R ###
+bindsym $modR+m workspace next
+
+
+
 
 
