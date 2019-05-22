@@ -190,3 +190,10 @@ exec nextcloud
 # exec --no-startup-id i3-msg 'workspace 2; exec terminator --title=Terminal'
 # exec --no-startup-id i3-msg 'workspace 3; exec nemo --no-desktop'
 
+
+battery 1 {
+  format = "%status %percentage %remaining"
+  path = "/sys/class/power_supply/BAT0/uevent"
+
+
+

@@ -94,6 +94,9 @@ vi() {
 # map capslock, escape & ctrl the way i like:
 source $HOME/.profile
 
+#### minikube ####
+#sudo systemctl enable libvirtd.service
+#sudo systemctl enable virtlogd.service
 
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

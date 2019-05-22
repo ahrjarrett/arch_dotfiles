@@ -7,8 +7,8 @@ set $modR Mod3
 set $alt Mod1
 
 
-
-font pango:Source Sans Pro-10
+# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1 15
+font pango:Source Code Pro Semibold 11
 
 # shift       Shift_L (0x32),  Shift_R (0x3e)
 # lock        Caps_Lock (0x42)
@@ -22,7 +22,8 @@ font pango:Source Sans Pro-10
 
 # i3 bar
 bar {
-  font pango:Source Sans Pro-10
+  #font pango:Source Sans Pro:style=Light 11
+  font pango:Source Code Pro Light 11
   position top
 
   status_command i3blocks
@@ -40,7 +41,7 @@ bar {
 }
 
 bindsym $modL+Return exec xterm
-bindsym $modL+d exec dmenu_run
+#bindsym $modL+d exec dmenu_run
 
 bindsym $modL+h focus left
 bindsym $modL+j focus down
@@ -57,7 +58,7 @@ bindsym $modL+Shift+l move right
 bindsym $modL+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
  # kill focused window
-bindsym $modL+q kill
+bindsym $modL+w kill
 
 # reload the configuration file
 bindsym $modL+Shift+r restart
@@ -72,12 +73,12 @@ bindsym $modL+v split v
 bindsym $modL+f fullscreen
 
 # brightness
-bindsym XF86MonBrightnessUp exec light -A 10
-bindsym XF86MonBrightnessDown exec light -U 10
+#bindsym XF86MonBrightnessUp exec light -A 10
+#bindsym XF86MonBrightnessDown exec light -U 10
 
-bindsym $modL+s layout stacking
-bindsym $modL+w layout tabbed
-bindsym $modL+e layout toggle split
+bindsym $modL+t layout toggle all
+#bindsym $modL+w layout tabbed
+#bindsym $modL+e layout toggle split
 
 # toggle tiling / floating
 bindsym $modL+Shift+space floating toggle

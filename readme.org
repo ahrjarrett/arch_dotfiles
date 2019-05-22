@@ -16,3 +16,12 @@
    ** except for [[https://github.com/ahrjarrett/dotfiles/tree/master/.exclude][.exclude]] dir, which is ignored recursively
 
 first commit: 11.29.2016
+
+
+
+*** arch linux
+
+**** where config lives
+- battery on macos
+/sys/class/power_supply/BAT0/uevent
+

@@ -67,7 +67,7 @@ set runtimepath+=~/.config/nvim/repos/github.com/Shougo/dein.vim/
 
 " System Settings:  ----------------------------------------------------------{{{
   set termguicolors
-  set mouse=a
+  set mouse=r
   set nowrap
   set guicursor=n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20
   " Turn off cursor blinking (noticable perf gain with autocomplete)

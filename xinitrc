@@ -29,11 +29,12 @@ xrdb -merge ~/.Xresources
 
 #setxkbmap us
 
+feh --bg-center '/root/dotfiles/i3/background.jpg' &
+sxhkd &
+
 setxkbmap -layout us -variant mac -option ctrl:nocaps | xkbcomp - $DISPLAY
 xmodmap -e "keycode 37 = Escape"
 setxkbmap -option ctrl:nocaps
-
-feh --bg-center '/root/dotfiles/i3/background.jpg'
 
 exec i3
 

@@ -1,0 +1,18 @@
+# comment
+#
+super + space
+  dmenu_run
+super + c
+  $BROWSER
+alt + g
+  dmenu_run
+
+# brightness
+XF86MonBrightnessUp
+  light -A 10
+XF86MonBrightnessDown
+  light -U 10
+
+control + q
+  pkill -USR1 -x sxhkd
+

@@ -10,14 +10,14 @@ Xft.rgba: rgb
 XTerm.transparent: true
 xTerm.shading: 20
 
-URxvt*faceName: Source Sans-Pro
-URxvt*faceSize: 14
+URxvt*faceName: Source Sans-Pro:Medium
+URxvt*faceSize: 12
 URxvt*selectToClipboard: true
 
-XTerm*faceName: Source Sans-Pro
-XTerm*faceSize: 14
+XTerm*faceName: Source Sans-Pro:Medium
+XTerm*faceSize: 12
 ! XTerm*selectToClipboard: true
-XTerm.vt100.selectToClipboard: on
+XTerm.t100.selectToClipboard: on
 
 ! special
 *.foreground:  #62a779
