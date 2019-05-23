@@ -1,24 +1,26 @@
 # i3 config file (v4)
 
+### launch NetworkManager on i3 start ###
+exec nm-applet
+
+# shift       Shift_L (0x32),  Shift_R (0x3e
+# lock        Caps_Lock (0x42)
+# control     Control_L (0x25),  Control_R (
+# mod1        Alt_L (0x40),  Alt_R (0x6c),
+# mod2        Num_Lock (0x4d)
+# mod3        Super_R (0x86)
+# mod4        Super_L (0x85),  Super_L (0xce
+# mod5        ISO_Level3_Shift (0x5c),  Mode
+
 # Super_L
 set $modL Mod4
 # Super_R
 set $modR Mod3
 set $alt Mod1
-
+set $term xterm
 
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1 15
 font pango:Source Code Pro Semibold 11
-
-# shift       Shift_L (0x32),  Shift_R (0x3e)
-# lock        Caps_Lock (0x42)
-# control     Control_L (0x25),  Control_R (0x69)
-# mod1        Alt_L (0x40),  Alt_R (0x6c),  Meta_L (0xcd)
-# mod2        Num_Lock (0x4d)
-# mod3        Super_R (0x86)
-# mod4        Super_L (0x85),  Super_L (0xce),  Hyper_L (0xcf)
-# mod5        ISO_Level3_Shift (0x5c),  Mode_switch (0xcb)
-
 
 # i3 bar
 bar {
@@ -40,81 +42,86 @@ bar {
   }
 }
 
-bindsym $modL+Return exec xterm
+bindsym $modL+Return               exec $term
+bindsym $modL+Shift+Return         split vertical;; exec $term
 #bindsym $modL+d exec dmenu_run
 
-bindsym $modL+h focus left
-bindsym $modL+j focus down
-bindsym $modL+k focus up
-bindsym $modL+l focus right
+bindsym $modL+h                    focus left
+bindsym $modL+j                    focus down
+bindsym $modL+k                    focus up
+bindsym $modL+l                    focus right
 
 # move focused window
-bindsym $modL+Shift+h move left
-bindsym $modL+Shift+j move down
-bindsym $modL+Shift+k move up
-bindsym $modL+Shift+l move right
+bindsym $modL+Shift+h               move left
+bindsym $modL+Shift+j               move down
+bindsym $modL+Shift+k               move up
+bindsym $modL+Shift+l               move right
 
 # exit i3 (logs you out of your X session)
-bindsym $modL+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $modL+Shift+e               exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
  # kill focused window
-bindsym $modL+w kill
+bindsym $modL+w                     kill
 
 # reload the configuration file
-bindsym $modL+Shift+r restart
+bindsym $modL+Shift+r               restart
 
 # split in horizontal orientation
-bindsym $modL+/ split h
+bindsym $modL+/                     split h
 
 # split in vertical orientation
-bindsym $modL+v split v
+bindsym $modL+v                     split v
 
 # enter fullscreen mode for the focused container
-bindsym $modL+f fullscreen
+bindsym $modL+f                     fullscreen
 
 # brightness
 #bindsym XF86MonBrightnessUp exec light -A 10
 #bindsym XF86MonBrightnessDown exec light -U 10
 
-bindsym $modL+t layout toggle all
+bindsym $modL+t                     split toggle
+bindsym $modL+Shift+t               layout toggle all
 #bindsym $modL+w layout tabbed
 #bindsym $modL+e layout toggle split
 
 # toggle tiling / floating
-bindsym $modL+Shift+space floating toggle
+bindsym $modL+Shift+space           floating toggle
 
 # focus the parent container
-bindsym $modL+a focus parent
+bindsym $modL+a                     focus parent
 
 # switch to workspace
-bindsym $modL+1 workspace 1
-bindsym $modL+2 workspace 2
-bindsym $modL+3 workspace 3
-bindsym $modL+4 workspace 4
-bindsym $modL+5 workspace 5
-bindsym $modL+6 workspace 6
-bindsym $modL+7 workspace 7
-bindsym $modL+8 workspace 8
-bindsym $modL+9 workspace 9
-bindsym $modL+0 workspace 10
-bindsym $modL+y workspace prev
-bindsym $modL+x workspace next
+bindsym $modL+1                     workspace 1
+bindsym $modL+2                     workspace 2
+bindsym $modL+3                     workspace 3
+bindsym $modL+4                     workspace 4
+bindsym $modL+5                     workspace 5
+bindsym $modL+6                     workspace 6
+bindsym $modL+7                     workspace 7
+bindsym $modL+8                     workspace 8
+bindsym $modL+9                     workspace 9
+bindsym $modL+0                     workspace 10
+bindsym $modL+y                     workspace prev
+bindsym $modL+x                     workspace next
 
 # move focused container to workspace
-bindsym $modL+Shift+1 move container to workspace 1
-bindsym $modL+Shift+2 move container to workspace 2
-bindsym $modL+Shift+3 move container to workspace 3
-bindsym $modL+Shift+4 move container to workspace 4
-bindsym $modL+Shift+5 move container to workspace 5
-bindsym $modL+Shift+6 move container to workspace 6
-bindsym $modL+Shift+7 move container to workspace 7
-bindsym $modL+Shift+8 move container to workspace 8
-bindsym $modL+Shift+9 move container to workspace 9
-bindsym $modL+Shift+0 move container to workspace 10
+bindsym $modL+Shift+1               move container to workspace 1
+bindsym $modL+Shift+2               move container to workspace 2
+bindsym $modL+Shift+3               move container to workspace 3
+bindsym $modL+Shift+4               move container to workspace 4
+bindsym $modL+Shift+5               move container to workspace 5
+bindsym $modL+Shift+6               move container to workspace 6
+bindsym $modL+Shift+7               move container to workspace 7
+bindsym $modL+Shift+8               move container to workspace 8
+bindsym $modL+Shift+9               move container to workspace 9
+bindsym $modL+Shift+0               move container to workspace 10
 
-bindsym $modL+z exec "xterm -cLauncher --geometry=800x200"
-for_window [instance="Launcher"] floating enable
+bindsym $modL+Tab                   workspace next
+bindsym $modL+Shift+Tab             workspace prev
 
+bindsym $modL+z                     exec "xterm -cLauncher --geometry=800x200"
+bindsym $modL+Shift+d               exec --no-startup-id i3-dmenu-desktop
+bindsym $modL+r                     mode "resize"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -140,8 +147,6 @@ mode "resize" {
   bindsym Escape mode "default"
 }
 
-
-
 #for_window [instance="file_progress"] floating enable
 # for_window [title="Terminal"] move window to workspace 2
 # for_window [title="term1"] move workspace number 2
@@ -152,22 +157,12 @@ mode "resize" {
 # for_window [instance="vlc"] floating enable
 # for_window [instance="qalculate"] floating enable
 
-### START UP ###
+for_window [instance="Launcher"] floating enable
 
-bindsym $modL+r mode "resize"
-
-bindsym $modL+Shift+d exec --no-startup-id i3-dmenu-desktop
-
-exec nm-applet
-
-bindsym $modL+Tab workspace next
-bindsym $modL+Shift+Tab workspace prev
-
-
-### SUPER_R ###
-bindsym $modR+m workspace next
-
-
-
-
+# i3-gaps
+# necessary for i3-gaps:
+for_window [class=".*"] border pixel 0
+gaps inner 15
+gaps outer 0
+smart_gaps on
 
