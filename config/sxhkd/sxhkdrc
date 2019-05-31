@@ -1,11 +1,10 @@
-# comment
-#
 super + space
   dmenu_run
 super + c
   $BROWSER
-alt + g
-  dmenu_run
+
+super + i
+  $TERMINAL -e htop
 
 # brightness
 XF86MonBrightnessUp
@@ -13,6 +12,7 @@ XF86MonBrightnessUp
 XF86MonBrightnessDown
   light -U 10
 
+# reload sxhkd
 control + q
   pkill -USR1 -x sxhkd
 

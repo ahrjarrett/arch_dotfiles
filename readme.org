@@ -19,9 +19,23 @@ first commit: 11.29.2016
 
 
 
-*** arch linux
+* arch linux
 
-**** where config lives
+** where weird config files are
+
 - battery on macos
-/sys/class/power_supply/BAT0/uevent
+  /sys/class/power_supply/BAT0/uevent
+
+- touchpad
+
+  /etc/X11/xorg.conf.d/**-touchpad.conf
+
+  where ** is currently 30, could be 00 using special macOS touchpad package
+
+** .local/bin
+
+This is where your scripts go. For example, in here are i3scripts
+
+
+
 

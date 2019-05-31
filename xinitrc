@@ -29,7 +29,7 @@ xrdb -merge ~/.Xresources
 
 #setxkbmap us
 
-feh --bg-center '/root/dotfiles/i3/background.jpg' &
+feh --bg-fill '/root/dotfiles/backgrounds/dusk.jpg' &
 sxhkd &
 
 setxkbmap -layout us -variant mac -option ctrl:nocaps | xkbcomp - $DISPLAY
